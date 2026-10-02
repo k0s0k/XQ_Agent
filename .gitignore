@@ -1,0 +1,21 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.vite/
+.pnpm-store/
+coverage/
+*.tsbuildinfo
+
+# Credentials, private documents and local runtime state
+.env
+.env.*
+!.env.example
+.local/
+*.log
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp

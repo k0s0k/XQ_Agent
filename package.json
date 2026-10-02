@@ -1,0 +1,40 @@
+{
+  "name": "xq-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "心桥：心理咨询师辅助接诊、LLM 对话与本地知识库工作台",
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "start": "node scripts/start.mjs",
+    "api": "node --env-file-if-exists=.env src/server/app-server.mjs",
+    "test": "node --test tests/server/*.test.mjs tests/shared/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "lucide-react": "1.26.0",
+    "pdfjs-dist": "6.3.289",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-markdown": "10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.3",
+    "prettier": "3.6.2",
+    "typescript": "7.0.2",
+    "vite": "8.1.4"
+  }
+}
